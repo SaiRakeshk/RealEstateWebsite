@@ -44,7 +44,9 @@ const Navbar = () => {
     navigate("/signin")
   }
 
-
+const tohome =() =>{
+  navigate('/')
+}
   const handleState = (e) => {
     setState(prev => {
       return { ...prev, [e.target.name]: e.target.value }
@@ -115,7 +117,7 @@ const Navbar = () => {
           Real Estate <BsHouseDoor />
         </Link>
         <ul className={classes.center}>
-          <li onClick={scrollToTop} className={classes.listItem}>
+          <li onClick={tohome} className={classes.listItem}>
             Home
           </li>
           <li onClick={() => {
@@ -208,7 +210,7 @@ const Navbar = () => {
               </Link>
               <AiOutlineClose className={classes.mobileCloseIcon} onClick={() => setShowMobileNav(false)} />
               <ul className={classes.center}>
-                <li onClick={scrollToTop} className={classes.listItem}>
+                <li onClick={tohome} className={classes.listItem}>
                   Home
                 </li>
                 <li className={classes.listItem}>
