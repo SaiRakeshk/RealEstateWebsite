@@ -85,12 +85,11 @@ const MyProfile = () => {
 
     const handleDeleteProfile = async () => {
         try {
-            const options = {
-                Authorization: `Bearer ${token}`
-            }
-            await request(`/yacht/find/bookmarked-yachts`, 'GET', options)
             dispatch(logout())
             navigate('/signin')
+            }
+            
+            
         } catch (error) {
             setError(true)
             setTimeout(() => {
